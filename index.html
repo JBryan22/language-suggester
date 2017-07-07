@@ -1,10 +1,143 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
     <meta charset="utf-8">
     <title>Track Suggester</title>
   </head>
   <body>
+    <div class="container">
+      <div class="row">
+        <div class="jumbotron">
+          <h1>Which Programming Language Is Right For You?</h1>
+          <h2>Answer a series of questions below, and we will suggest a programming language that suits you!</h2>
+        </div>
+      </div>
 
+      <!--QUESTION 1 -->
+      <div class="row well well" id="question1">
+        <div class="col-md-12">
+          <h3>Question 1 of 5:</h3>
+          <label>Would you rather work in a large and established company, or as part of a smaller (potentially startup) and fast-paced company:</label>
+          <div class="radio">
+            <label>
+              <input type="radio" name="q1-size" value="large">
+              Large and Established
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="q1-size" value="small">
+              Small and fast-paced startup
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!--QUESTION 2 -->
+      <div class="row well" id="question2">
+        <div class="col-md-12">
+          <h3>Question 2 of 5:</h3>
+          <label>Are you interested in designing apps for mobile devices?</label>
+          <div class="radio">
+            <label>
+              <input type="radio" name="q2-mobile" value="yes">
+              Yes
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="q2-mobile" value="no">
+              No
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!--QUESTION 3 -->
+      <div class="row well" id="question3">
+        <div class="col-md-12">
+          <h3>Question 3 of 5:</h3>
+          <label>Which of these sounds the most appealing to you?</label>
+          <div class="radio">
+            <label>
+              <input type="radio" name="q3-appeal" value="internal">
+              Designing internal software for a large business or enterprise
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="q3-appeal" value="management">
+              Designing backend services for content management systems (such as Drupal or WordPress)
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="a3-appeal" value="web-app">
+              Designing interactive web applications in a fast paced environment
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!--QUESTION 4 -->
+      <div class="row well" id="question4">
+        <div class="col-md-12">
+          <h3>Question 4 of 5:</h3>
+          <label>Are you interested in maintaining the backend for an organization that has many different websites?</label>
+          <div class="radio">
+            <label>
+              <input type="radio" name="q4-backend" value="yes">
+              Yes
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="q4-backend" value="no">
+              No
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!--QUESTION 5 -->
+      <div class="row well" id="question5">
+        <div class="col-md-12">
+          <h3>Question 5 of 5:</h3>
+          <label>Which of these do you prefer?</label>
+          <div class="radio">
+            <label>
+              <input type="radio" name="q5-silly" value="music">
+              Music
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="q5-silly" value="coffee">
+              Coffee
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="q5-silly" value="gems">
+              Gems
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="button-row">
+        <div class="col-md-12">
+          <button id="next" class="btn btn-success btn-lg">Next</button>
+        </div>
+      </div>
+
+    </div>
   </body>
 </html>
