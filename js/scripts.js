@@ -2,7 +2,8 @@ var csharp = 0;
 var jav = 0;
 var php = 0;
 var ruby = 0;
-var questionNum = 1;
+var questionNum = 0;
+var name = "";
 
 var displayChosenLanguage = function(csharp, jav, php, ruby) {
   if (csharp < 3 && jav < 3 && php < 3 && ruby < 3) {
@@ -29,7 +30,16 @@ var displayChosenLanguage = function(csharp, jav, php, ruby) {
 
 $(function() {
     $("#next").click(function(){
-      if (questionNum === 1) {
+      if (questionNum === 0) {
+        name = $("#name").val();
+        if (name) {
+          $("#nameRow").slideUp("fast");
+          $("#question1").fadeIn("slow", "swing");
+          questionNum += 1;
+        } else {
+          alert("Please Enter Your Name");
+        }
+      } else if (questionNum === 1) {
         var answer = $("input:radio[name=q1-size]:checked").val();
         if (answer) {
           if (answer === "large") {
@@ -102,6 +112,8 @@ $(function() {
           }
           $("#question5").slideUp("fast");
           $("#button-row").hide();
+          $("#insertName").text(name + ", ");
+          $("#nameDisplay").show();
           displayChosenLanguage(csharp, jav, php, ruby);
         } else {
           alert("Please Select An Answer");

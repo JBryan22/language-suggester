@@ -6,12 +6,21 @@ body {
   background-color: #d9edf7;
 }
 
-#question2, #question3, #question4, #question5, #CSharp, #Java, #PHP, #Ruby {
+#question1, #question2, #question3, #question4, #question5, #nameDisplay, #CSharp, #Java, #PHP, #Ruby {
   display: none;
 }
 
 #next {
   width:10%;
+}
+
+#name {
+  width:50%;
+  margin:auto;
+}
+
+#nameDisplay {
+  margin-bottom: 3%;
 }
 
 .panel-heading{
