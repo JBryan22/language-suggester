@@ -4,15 +4,26 @@ var php = 0;
 var ruby = 0;
 var questionNum = 1;
 
-var determineLanguageString = function(csharp, jav, php, ruby) {
-  if (csharp >= 4) {
-    return "csharp";
-  } else if (jav >= 4) {
-    return "jav";
-  } else if (php >= 4) {
-    return "php";
-  } else if (ruby >= 4) {
-    return "ruby";
+var displayChosenLanguage = function(csharp, jav, php, ruby) {
+  if (csharp < 3 && jav < 3 && php < 3 && ruby < 3) {
+    csharp += 1;
+    jav += 1;
+    php += 1;
+    ruby +=1;
+    displayChosenLanguage(csharp, jav, php, ruby);
+  } else {
+    if (csharp >= 3) {
+      $("#CSharp").fadeIn("slow");
+    }
+    if (jav >= 3) {
+      $("#Java").fadeIn("slow");
+    }
+    if (php >= 3) {
+      $("#PHP").fadeIn("slow");
+    }
+    if (ruby >= 3) {
+      $("#Ruby").fadeIn("slow");
+    }
   }
 }
 
@@ -90,6 +101,8 @@ $(function() {
             ruby += 1;
           }
           $("#question5").slideUp("fast");
+          $("#button-row").hide();
+          displayChosenLanguage(csharp, jav, php, ruby);
         } else {
           alert("Please Select An Answer");
         }
