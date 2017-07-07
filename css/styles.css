@@ -2,10 +2,18 @@ body {
   text-align: center;
 }
 
+.jumbotron {
+  background-color: #d9edf7;
+}
+
 #question2, #question3, #question4, #question5, #CSharp, #Java, #PHP, #Ruby {
   display: none;
 }
 
 #next {
   width:10%;
+}
+
+.panel-heading{
+  font-size: 1.5em;
 }
