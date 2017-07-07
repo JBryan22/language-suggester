@@ -4,6 +4,18 @@ var php = 0;
 var ruby = 0;
 var questionNum = 1;
 
+var determineLanguageString = function(csharp, jav, php, ruby) {
+  if (csharp >= 4) {
+    return "csharp";
+  } else if (jav >= 4) {
+    return "jav";
+  } else if (php >= 4) {
+    return "php";
+  } else if (ruby >= 4) {
+    return "ruby";
+  }
+}
+
 $(function() {
     $("#next").click(function(){
       if (questionNum === 1) {
@@ -78,9 +90,9 @@ $(function() {
             ruby += 1;
           }
           $("#question5").slideUp("fast");
-
         } else {
           alert("Please Select An Answer");
         }
+      }
     });
 });
